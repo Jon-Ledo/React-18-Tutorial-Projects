@@ -1,12 +1,16 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react'
 
 const UseEffectBasics = () => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(0)
   const sayHello = () => {
-    console.log('hello there');
-  };
+    console.log('hello there')
+  }
 
-  sayHello();
+  sayHello()
+
+  useEffect(() => {
+    console.log('use effect')
+  }, [])
 
   return (
     <div>
@@ -15,6 +19,6 @@ const UseEffectBasics = () => {
         click me
       </button>
     </div>
-  );
-};
-export default UseEffectBasics;
+  )
+}
+export default UseEffectBasics
